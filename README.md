@@ -1,6 +1,11 @@
 # Be My Valentine? 🌹
 
-A playful and interactive Valentine's Day proposal app built with React, TypeScript, and Tailwind CSS.
+A playful, interactive, and offline-ready Valentine's Day proposal app built with React, TypeScript, and Vite PWA.
+
+## Features
+- 📱 **Installable**: Can be installed on mobile (iOS/Android) and desktop.
+- 🔌 **Offline Ready**: Works without an internet connection after the first visit.
+- 🎨 **Playful UI**: Floating hearts, animated buttons, and a fun "No" button mechanic.
 
 ## Getting Started
 
@@ -30,25 +35,19 @@ Open your browser to the URL shown in the terminal (usually `http://localhost:51
 
 ### Building for Production
 
-To build the app for deployment:
+To build the app for deployment (this generates the Service Worker for offline support):
 ```bash
 npm run build
 ```
 
-## ⚠️ Important: Adding Photos
-
-For your photos to appear in the app (both locally and when deployed), you **must** create a `public` folder in the root directory and place your images there.
-
-1.  Create a folder named `public` at the project root.
-2.  Add your photo files inside it with these exact names:
-    - `photo_hacked.jpg`
-    - `photo_sunny.jpg`
-    - `photo_bookstore.jpg`
-
-Do **not** put them in the `src` or `components` folder. They must be in `public` to be included in the final website build.
+To preview the built production version:
+```bash
+npm run preview
+```
 
 ## Tech Stack
 - React
 - TypeScript
 - Vite
-- Tailwind CSS (via CDN for simplicity)
+- Vite PWA (Service Workers & Manifest)
+- Tailwind CSS
